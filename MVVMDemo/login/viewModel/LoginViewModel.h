@@ -10,6 +10,8 @@
 #import "AccountModel.h"
 @interface LoginViewModel : NSObject
 
+@property (nonatomic,strong) RACCommand * loginCommand;
+
 @property (nonatomic,strong) AccountModel * accountModel;
 
 

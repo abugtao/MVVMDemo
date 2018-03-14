@@ -11,4 +11,11 @@
 @interface LoginService : HTRequest
 //登录
 - (void)requestLoginWithParam:(NSDictionary *)params succCallback:(void (^)(HTResponse * response))succcallback failCallback:(void(^)(HTResponse *response))failcallback;
+
+
+//保险产品列表
+- (void)requestProductionListWithParam:(NSDictionary *)params succCallback:(void (^)(HTResponse * response))succcallback failCallback:(void(^)(HTResponse *response))failcallback;
+
+
+
 @end

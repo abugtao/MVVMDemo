@@ -7,30 +7,49 @@
 //
 
 #import "LoginHandler.h"
-
+#import "ProductionModel.h"
 @implementation LoginHandler
 //消息列表
-- (HTResponse *)handleMessageCenterListInfo:(NSDictionary *)resultDic{
+- (HTResponse *)handleMessageCenterListInfo:(HTResponse *)response{
+//        if ([response.status isEqualToString:@"10000"]) {
+//            NSMutableArray *mArray = [NSMutableArray array];
+//            NSDictionary *resultDic = response.object;
+//
+//            NSArray *array = [[resultDic objectForKey:@"data"] objectForKey:@"items"];
+//
+//
+//            for (NSDictionary *dic in array) {
+//                MessageCenterListModel *model = [MessageCenterListModel objectFromDict:dic];
+//                [mArray addObject:model];
+//            }
+//            //        [mArray removeAllObjects];
+//            response.object = mArray;
+//            response.totalPage = [[[resultDic objectForKey:@"data"] objectForKey:@"pageNum"] integerValue];
+//            response.boolArg = mArray.count>=10;
+//
+//        }
     
-    HTResponse *response = [self preParseWithDic:resultDic];
-    
-    //    if ([response.status isEqualToString:@"10000"]) {
-    //        NSMutableArray *mArray = [NSMutableArray array];
-    //        NSDictionary *resultDic = response.object;
-    //
-    //        NSArray *array = [[resultDic objectForKey:@"data"] objectForKey:@"items"];
-    //
-    //
-    //        for (NSDictionary *dic in array) {
-    //            MessageCenterListModel *model = [MessageCenterListModel objectFromDict:dic];
-    //            [mArray addObject:model];
-    //        }
-    //        //        [mArray removeAllObjects];
-    //        response.object = mArray;
-    //        response.totalPage = [[[resultDic objectForKey:@"data"] objectForKey:@"pageNum"] integerValue];
-    //        response.boolArg = mArray.count>=10;
-    //
-    //    }
+    return response;
+}
+
+//产品列表
+- (HTResponse *)handleProductionListInfo:(HTResponse *)response{
+    if ([response.status integerValue]==10000) {
+        NSArray *items = [response.object objectForKey:@"items"];
+        NSMutableArray *mArray = [NSMutableArray array];
+        for (NSDictionary *dic in items) {
+            ProductionModel *insuranceModel = [ProductionModel mj_objectWithKeyValues:dic];
+            [mArray addObject:insuranceModel];
+           
+        }
+        
+        
+     
+        response.object = mArray;
+        
+        
+        
+    }
     
     return response;
 }

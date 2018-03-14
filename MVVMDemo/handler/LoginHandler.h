@@ -10,6 +10,8 @@
 
 @interface LoginHandler : BaseHandler
 //消息列表
-- (HTResponse *)handleMessageCenterListInfo:(NSDictionary *)resultDic;
+- (HTResponse *)handleMessageCenterListInfo:(HTResponse *)response;
 
+//产品列表
+- (HTResponse *)handleProductionListInfo:(HTResponse *)response;
 @end

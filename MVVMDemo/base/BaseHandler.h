@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "HTResponse.h"
 @interface BaseHandler : NSObject
-- (HTResponse *)preParseWithDic:(NSDictionary *)dic;
+- (HTResponse *)preParseWithDic:(HTResponse *)response;
 @end

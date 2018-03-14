@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginViewModel.h"
 #import "LoginService.h"
+#import "ProductionsViewController.h"
 @interface LoginViewController ()
 @property (nonatomic,strong) UITextField * nameTextField;
 
@@ -58,14 +59,33 @@
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self)
         //
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        [params setObject:self.nameTextField.text forKey:@"username"];
-        [params setObject:self.pwdTextField.text forKey:@"password"];
-        [params setObject:@"IOS" forKey:@"device"];
-        [params setObject:@"" forKey:@"token"];
-        [[[LoginService alloc] init] requestLoginWithParam:params succCallback:^(HTResponse *response) {
+//        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+//        [params setObject:self.nameTextField.text forKey:@"username"];
+//        [params setObject:self.pwdTextField.text forKey:@"password"];
+//        [params setObject:@"IOS" forKey:@"device"];
+//        [params setObject:@"" forKey:@"token"];
+//        [[[LoginService alloc] init] requestLoginWithParam:params succCallback:^(HTResponse *response) {
+//
+//        } failCallback:^(HTResponse *response) {
+//
+//        }];
+        @weakify(self)
+        [[self.viewModel.loginCommand execute:nil] subscribeNext:^(HTResponse *response) {
+            @strongify(self)
+            if ([response.status integerValue]==10000) {
+                AccountModel *model = [AccountModel mj_objectWithKeyValues:response.object];
+                NSLog(@"%@",model);
+                model.name = self.nameTextField.text;
+                model.pwd = self.pwdTextField.text;
+                [CommonDataUtils saveUserInfo:model];
+                
+                
+                ProductionsViewController *listVC = [[ProductionsViewController alloc] init];
+                [self.navigationController pushViewController:listVC animated:YES];
+                
+                
+            }
             
-        } failCallback:^(HTResponse *response) {
             
         }];
     }];

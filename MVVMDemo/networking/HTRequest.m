@@ -28,8 +28,10 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         HTResponse *response = [[HTResponse alloc]init];
-        response.object = responseObject;
+        response.object = responseObject[@"data"];
         response.message = [responseObject objectForKey:@"message"];
+        response.status = responseObject[@"status"];
+        response.url = url;
         if ([[[responseObject objectForKey:@"status"] stringValue] isEqualToString:@"10000"]) {
             TLog(@"done---url--%@%@-->%@",API_BASE_URL,url,response.status);
             TLog(@"response---%@",responseObject);
@@ -39,7 +41,6 @@
         }else{
             TLog(@"done---url--%@%@-->%@",API_BASE_URL,url,responseObject[@"status"]);
             TLog(@"error---%@",responseObject);
-            response.status = responseObject[@"status"];
             if(failcallback != nil)
                 failcallback(response);
         }

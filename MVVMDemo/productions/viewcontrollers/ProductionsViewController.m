@@ -7,8 +7,13 @@
 //
 
 #import "ProductionsViewController.h"
-
+#import "ProductionViewModel.h"
+#import "HTResponse.h"
 @interface ProductionsViewController ()
+
+@property (nonatomic,strong) ProductionViewModel * viewmodel;
+
+@property (nonatomic,strong) UITableView * tableView;
 
 @end
 
@@ -18,7 +23,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self setupViewModel];
+    [self requstData];
+    
+}
+- (void)requstData{
+    [[self.viewmodel.productionListCommand execute:nil] subscribeNext:^(HTResponse * resonse) {
+        
+    }];
+}
+
+- (void)setupViewModel{
+    [self.viewmodel bindViewToViewModel:self.tableView];
+}
+
+-(UITableView *)tableView{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WDITH, SCREEN_HEIGTH - 64) style:UITableViewStylePlain];
+        [self.view addSubview:_tableView];
+        
+    }
+    return _tableView;
+}
+-(ProductionViewModel *)viewmodel{
+    if (_viewmodel==nil) {
+        _viewmodel = [[ProductionViewModel alloc] init];
+        
+    }
+    return _viewmodel;
 }
 
 - (void)didReceiveMemoryWarning {

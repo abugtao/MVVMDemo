@@ -16,7 +16,6 @@
 		FCA7ADA72057B0C60008BA95 /* MVVMDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADA62057B0C60008BA95 /* MVVMDemoTests.m */; };
 		FCA7ADB22057B0C60008BA95 /* MVVMDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADB12057B0C60008BA95 /* MVVMDemoUITests.m */; };
 		FCA7ADCC2057B6BB0008BA95 /* ProductionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADCB2057B6BB0008BA95 /* ProductionsViewController.m */; };
-		FCA7ADD02057B8020008BA95 /* ProductionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADCF2057B8020008BA95 /* ProductionCollectionViewCell.m */; };
 		FCA7ADD42057BA100008BA95 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADD32057BA0F0008BA95 /* UIViewExt.m */; };
 		FCA7ADD82057BAC50008BA95 /* HTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADD72057BAC50008BA95 /* HTRequest.m */; };
 		FCA7ADDB2057BB3A0008BA95 /* HTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADDA2057BB3A0008BA95 /* HTResponse.m */; };
@@ -29,6 +28,11 @@
 		FCA7ADFC2057D1160008BA95 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADFB2057D1160008BA95 /* LoginService.m */; };
 		FCA7AE002057D2050008BA95 /* BaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7ADFF2057D2050008BA95 /* BaseHandler.m */; };
 		FCA7AE032057D2490008BA95 /* LoginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE022057D2490008BA95 /* LoginHandler.m */; };
+		FCA7AE0A205904730008BA95 /* CommonDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE09205904730008BA95 /* CommonDataUtils.m */; };
+		FCA7AE0E20591A210008BA95 /* ProductionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE0D20591A210008BA95 /* ProductionListTableViewCell.m */; };
+		FCA7AE1120591A560008BA95 /* ProductionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1020591A560008BA95 /* ProductionModel.m */; };
+		FCA7AE1420591A660008BA95 /* ProductionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1320591A660008BA95 /* ProductionViewModel.m */; };
+		FCA7AE1720591B6C0008BA95 /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1620591B6C0008BA95 /* UILabel+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +73,6 @@
 		FCA7ADCA2057B6BB0008BA95 /* ProductionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionsViewController.h; sourceTree = "<group>"; };
 		FCA7ADCB2057B6BB0008BA95 /* ProductionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionsViewController.m; sourceTree = "<group>"; };
 		FCA7ADCD2057B7280008BA95 /* MVVMDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMDemo.pch; sourceTree = "<group>"; };
-		FCA7ADCE2057B8020008BA95 /* ProductionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductionCollectionViewCell.h; sourceTree = "<group>"; };
-		FCA7ADCF2057B8020008BA95 /* ProductionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductionCollectionViewCell.m; sourceTree = "<group>"; };
 		FCA7ADD22057BA0F0008BA95 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		FCA7ADD32057BA0F0008BA95 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		FCA7ADD62057BAC50008BA95 /* HTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTRequest.h; sourceTree = "<group>"; };
@@ -97,6 +99,17 @@
 		FCA7AE012057D2490008BA95 /* LoginHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginHandler.h; sourceTree = "<group>"; };
 		FCA7AE022057D2490008BA95 /* LoginHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginHandler.m; sourceTree = "<group>"; };
 		FCA7AE072057D34F0008BA95 /* api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		FCA7AE08205904730008BA95 /* CommonDataUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDataUtils.h; sourceTree = "<group>"; };
+		FCA7AE09205904730008BA95 /* CommonDataUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonDataUtils.m; sourceTree = "<group>"; };
+		FCA7AE0B205905DE0008BA95 /* EncoderDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncoderDecoder.h; sourceTree = "<group>"; };
+		FCA7AE0C20591A210008BA95 /* ProductionListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductionListTableViewCell.h; sourceTree = "<group>"; };
+		FCA7AE0D20591A210008BA95 /* ProductionListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductionListTableViewCell.m; sourceTree = "<group>"; };
+		FCA7AE0F20591A560008BA95 /* ProductionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductionModel.h; sourceTree = "<group>"; };
+		FCA7AE1020591A560008BA95 /* ProductionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductionModel.m; sourceTree = "<group>"; };
+		FCA7AE1220591A660008BA95 /* ProductionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductionViewModel.h; sourceTree = "<group>"; };
+		FCA7AE1320591A660008BA95 /* ProductionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductionViewModel.m; sourceTree = "<group>"; };
+		FCA7AE1520591B6C0008BA95 /* UILabel+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Helper.h"; sourceTree = "<group>"; };
+		FCA7AE1620591B6C0008BA95 /* UILabel+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +243,8 @@
 		FCA7ADC72057B6940008BA95 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7AE1220591A660008BA95 /* ProductionViewModel.h */,
+				FCA7AE1320591A660008BA95 /* ProductionViewModel.m */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -237,6 +252,8 @@
 		FCA7ADC82057B69C0008BA95 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7AE0F20591A560008BA95 /* ProductionModel.h */,
+				FCA7AE1020591A560008BA95 /* ProductionModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -244,8 +261,8 @@
 		FCA7ADC92057B6A40008BA95 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				FCA7ADCE2057B8020008BA95 /* ProductionCollectionViewCell.h */,
-				FCA7ADCF2057B8020008BA95 /* ProductionCollectionViewCell.m */,
+				FCA7AE0C20591A210008BA95 /* ProductionListTableViewCell.h */,
+				FCA7AE0D20591A210008BA95 /* ProductionListTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -255,6 +272,8 @@
 			children = (
 				FCA7ADD22057BA0F0008BA95 /* UIViewExt.h */,
 				FCA7ADD32057BA0F0008BA95 /* UIViewExt.m */,
+				FCA7AE1520591B6C0008BA95 /* UILabel+Helper.h */,
+				FCA7AE1620591B6C0008BA95 /* UILabel+Helper.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -300,6 +319,7 @@
 		FCA7ADE32057BF800008BA95 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7AE0B205905DE0008BA95 /* EncoderDecoder.h */,
 				FCA7ADE42057BF990008BA95 /* define.h */,
 				FCA7ADE92057C2470008BA95 /* Config.h */,
 				FCA7ADEA2057C2470008BA95 /* Config.m */,
@@ -313,6 +333,8 @@
 			children = (
 				FCA7ADE62057C1110008BA95 /* CommonUtils.h */,
 				FCA7ADE72057C1110008BA95 /* CommonUtils.m */,
+				FCA7AE08205904730008BA95 /* CommonDataUtils.h */,
+				FCA7AE09205904730008BA95 /* CommonDataUtils.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -562,18 +584,22 @@
 				FCA7ADDB2057BB3A0008BA95 /* HTResponse.m in Sources */,
 				FCA7AD9D2057B0C60008BA95 /* main.m in Sources */,
 				FCA7ADD82057BAC50008BA95 /* HTRequest.m in Sources */,
+				FCA7AE1720591B6C0008BA95 /* UILabel+Helper.m in Sources */,
 				FCA7AE002057D2050008BA95 /* BaseHandler.m in Sources */,
+				FCA7AE0E20591A210008BA95 /* ProductionListTableViewCell.m in Sources */,
+				FCA7AE1120591A560008BA95 /* ProductionModel.m in Sources */,
 				FCA7ADCC2057B6BB0008BA95 /* ProductionsViewController.m in Sources */,
 				FCA7ADE82057C1110008BA95 /* CommonUtils.m in Sources */,
 				FCA7ADEB2057C2470008BA95 /* Config.m in Sources */,
+				FCA7AE0A205904730008BA95 /* CommonDataUtils.m in Sources */,
 				FCA7ADD42057BA100008BA95 /* UIViewExt.m in Sources */,
 				FCA7ADFC2057D1160008BA95 /* LoginService.m in Sources */,
 				FCA7AD8F2057B0C50008BA95 /* AppDelegate.m in Sources */,
 				FCA7ADF42057C5480008BA95 /* LoginViewModel.m in Sources */,
 				FCA7ADE12057BE8C0008BA95 /* RSA.m in Sources */,
 				FCA7ADF12057C5210008BA95 /* LoginViewController.m in Sources */,
+				FCA7AE1420591A660008BA95 /* ProductionViewModel.m in Sources */,
 				FCA7ADF72057C5540008BA95 /* AccountModel.m in Sources */,
-				FCA7ADD02057B8020008BA95 /* ProductionCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

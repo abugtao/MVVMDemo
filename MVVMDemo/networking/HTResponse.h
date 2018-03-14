@@ -11,7 +11,11 @@
 @interface HTResponse : NSObject
 
 @property (nonatomic,copy) NSString * url;
+
+
 @property (nonatomic,strong) NSError * error;
+
+
 @property (nonatomic,copy) NSString * status;
 @property (nonatomic,strong) id object;
 @property (nonatomic,copy) NSString * message;

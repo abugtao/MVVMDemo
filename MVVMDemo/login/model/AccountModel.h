@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AccountModel : NSObject
+@interface AccountModel : NSObject<NSCoding>
 @property (nonatomic,strong) NSString * name;
 @property (nonatomic,strong) NSString * pwd;
+
+@property (nonatomic,copy) NSString * session_id;
+
+@property (nonatomic,copy) NSString * username;
 @end

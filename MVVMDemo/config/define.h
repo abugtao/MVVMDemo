@@ -17,6 +17,10 @@
 
 #define UIColorWithRGBA(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
+// 字体
+#define DiyFont(fontsize) [UIFont systemFontOfSize:fontsize]
+#define BDiyFont(fontsize) [UIFont boldSystemFontOfSize:fontsize]
+
 #ifdef DEBUG
 #define TLog(format, ...) printf("%s\n\n",[[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String])
 #else
