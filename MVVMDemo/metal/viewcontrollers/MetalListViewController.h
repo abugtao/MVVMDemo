@@ -11,7 +11,7 @@
 @interface MetalListViewController : UIViewController
 
 
-
+@property (nonatomic,strong) RACSubject * itemSubject;
 
 
 

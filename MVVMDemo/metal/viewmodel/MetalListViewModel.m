@@ -22,6 +22,7 @@
     self = [super init];
     if (self) {
         self.dataArray = [NSMutableArray array];
+        self.itemSubject = [RACSubject subject];
         [self initCommand];
     }
     return self;
@@ -98,6 +99,8 @@
     [cell.cellSubject sendNext:self.dataArray[indexPath.row]];
     return cell;
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.itemSubject sendNext:self.dataArray[indexPath.row]];
+}
 
 @end

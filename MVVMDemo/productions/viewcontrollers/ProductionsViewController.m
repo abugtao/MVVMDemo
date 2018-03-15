@@ -49,9 +49,7 @@
 
 - (void)requstData{
     
-    [[self.viewmodel.productionListCommand execute:@1] subscribeNext:^(HTResponse * resonse) {
-        
-    }];
+    [self.viewmodel.productionListCommand execute:@1];
 }
 
 -(ProductionViewModel *)viewmodel{

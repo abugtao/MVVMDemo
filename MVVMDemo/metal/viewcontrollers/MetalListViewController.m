@@ -8,6 +8,7 @@
 
 #import "MetalListViewController.h"
 #import "MetalListViewModel.h"
+#import "Metal.h"
 @interface MetalListViewController ()
 @property (nonatomic,strong) MetalListViewModel * viewModel;
 @property (nonatomic,strong) UICollectionView * collectionView;
@@ -20,6 +21,8 @@
     // Do any additional setup after loading the view.
     [self initViews];
     [self setUpViewModel];
+    [self requstData];
+    
 }
 
 - (void)initViews{
@@ -38,8 +41,13 @@
 - (void)setUpViewModel{
     
     [self.viewModel bindViewModelWithView:self.collectionView];
-    [self.viewModel.requestMetalListCommand execute:@1];
-    
+    [self.viewModel.itemSubject subscribeNext:^(Metal * metal) {
+        
+    }];
+}
+
+- (void)requstData{
+     [self.viewModel.requestMetalListCommand execute:@1];
 }
 
 -(MetalListViewModel *)viewModel{
