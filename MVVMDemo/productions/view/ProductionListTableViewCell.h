@@ -10,4 +10,5 @@
 
 @interface ProductionListTableViewCell : UITableViewCell
 @property (nonatomic,strong) RACSubject *cellSubject;
+@property (nonatomic,strong) RACSubject * collectSubject;
 @end

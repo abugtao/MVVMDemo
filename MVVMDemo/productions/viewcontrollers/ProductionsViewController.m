@@ -24,28 +24,34 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    [self initViews];
     [self setupViewModel];
     [self requstData];
     
 }
+
+- (void)initViews{
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WDITH, SCREEN_HEIGTH - 64) style:UITableViewStylePlain];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self.view addSubview:_tableView];
+}
 - (void)requstData{
-    [[self.viewmodel.productionListCommand execute:nil] subscribeNext:^(HTResponse * resonse) {
+    [self.tableView.pullToRefreshView startAnimating];
+    [[self.viewmodel.productionListCommand execute:@1] subscribeNext:^(HTResponse * resonse) {
         
     }];
 }
 
 - (void)setupViewModel{
     [self.viewmodel bindViewToViewModel:self.tableView];
+    
+    [self.viewmodel.itemSubject subscribeNext:^(ProductionViewModel *model) {
+        
+    }];
 }
 
--(UITableView *)tableView{
-    if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WDITH, SCREEN_HEIGTH - 64) style:UITableViewStylePlain];
-        [self.view addSubview:_tableView];
-        
-    }
-    return _tableView;
-}
+
 -(ProductionViewModel *)viewmodel{
     if (_viewmodel==nil) {
         _viewmodel = [[ProductionViewModel alloc] init];

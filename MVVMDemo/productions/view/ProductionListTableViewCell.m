@@ -16,6 +16,10 @@
 @property (nonatomic,strong) UILabel * priceLabel;
 
 
+@property (nonatomic,strong) UIButton * collectBtn;
+
+@property (nonatomic,strong) ProductionModel * model;
+
 @end
 @implementation ProductionListTableViewCell
 
@@ -45,13 +49,26 @@
     [self.contentView addSubview:self.priceLabel];
     
     
+    self.collectBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    
+    self.collectBtn.backgroundColor = [UIColor redColor];
+    [self.contentView addSubview:self.collectBtn];
+    
+    self.collectSubject = [RACSubject subject];
+    @weakify(self)
+    [[self.collectBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self)
+        [self.collectSubject sendNext:self.model];
+        
+        
+    }];
+    
     
     self.cellSubject = [RACSubject subject];
     
-    
-    @weakify(self)
     [self.cellSubject subscribeNext:^(ProductionModel *model) {
         @strongify(self)
+        self.model = model;
         [self.picImageView sd_setImageWithURL:[NSURL URLWithString:model.bannerPath] placeholderImage:[UIImage imageNamed:@""]];
         
         self.nameLabel.text = model.insProductName;
@@ -64,8 +81,6 @@
         [self.priceLabel sizeToFit];
         self.priceLabel.left = 15 + 12;
         self.priceLabel.top = self.nameLabel.bottom + 10;
-        
-        
         
         
     }];

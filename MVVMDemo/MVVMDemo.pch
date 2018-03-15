@@ -16,7 +16,7 @@
 #import <MJExtension.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
-
+#import "SVPullToRefresh.h"
 
 
 #import "UIViewExt.h"

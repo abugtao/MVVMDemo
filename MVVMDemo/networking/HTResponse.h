@@ -20,4 +20,7 @@
 @property (nonatomic,strong) id object;
 @property (nonatomic,copy) NSString * message;
 
+
+@property (nonatomic,assign) NSInteger  totalCount;
+
 @end

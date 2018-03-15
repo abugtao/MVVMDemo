@@ -37,13 +37,14 @@
     if ([response.status integerValue]==10000) {
         NSArray *items = [response.object objectForKey:@"items"];
         NSMutableArray *mArray = [NSMutableArray array];
+        
         for (NSDictionary *dic in items) {
             ProductionModel *insuranceModel = [ProductionModel mj_objectWithKeyValues:dic];
             [mArray addObject:insuranceModel];
            
         }
         
-        
+        response.totalCount = [[response.object objectForKey:@"totalCount"] integerValue];
      
         response.object = mArray;
         
