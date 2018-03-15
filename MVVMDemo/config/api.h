@@ -11,7 +11,9 @@
 
 #define API_COSTOMER_LOGIN @"customer/login"
 
-#define API_PRODUCTION_LIST @"insurance/LstInsuranceProducts" 
+#define API_PRODUCTION_LIST @"insurance/LstInsuranceProducts"
+
+#define API_METAL_LIST @"nobleMetal/goodsList"
 
 
 #endif /* api_h */

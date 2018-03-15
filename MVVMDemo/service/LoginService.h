@@ -16,6 +16,7 @@
 //保险产品列表
 - (void)requestProductionListWithParam:(NSDictionary *)params succCallback:(void (^)(HTResponse * response))succcallback failCallback:(void(^)(HTResponse *response))failcallback;
 
-
+//贵金属产品列表
+- (void)requestMetalProductionListWithParam:(NSDictionary *)params succCallback:(void (^)(HTResponse * response))succcallback failCallback:(void(^)(HTResponse *response))failcallback;
 
 @end

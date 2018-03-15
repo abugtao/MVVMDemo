@@ -56,6 +56,8 @@
         [self.productionListCommand execute:[NSNumber numberWithInteger:self.page]];
     }];
     
+    [self.tableView.pullToRefreshView startAnimating];
+    
 }
 
 

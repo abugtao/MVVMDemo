@@ -14,4 +14,8 @@
 
 //产品列表
 - (HTResponse *)handleProductionListInfo:(HTResponse *)response;
+
+
+//贵金属产品列表
+- (HTResponse *)handleMetalProductionListInfo:(HTResponse *)response;
 @end

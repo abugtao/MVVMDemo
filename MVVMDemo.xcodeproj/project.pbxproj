@@ -35,6 +35,10 @@
 		FCA7AE1720591B6C0008BA95 /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1620591B6C0008BA95 /* UILabel+Helper.m */; };
 		FCA7AE1E205A466A0008BA95 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1A205A466A0008BA95 /* UIScrollView+SVInfiniteScrolling.m */; };
 		FCA7AE1F205A466A0008BA95 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE1B205A466A0008BA95 /* UIScrollView+SVPullToRefresh.m */; };
+		FCA7AE27205A538B0008BA95 /* MetalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE26205A538B0008BA95 /* MetalListViewController.m */; };
+		FCA7AE2A205A53A00008BA95 /* MetalListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE29205A53A00008BA95 /* MetalListViewModel.m */; };
+		FCA7AE2D205A53A80008BA95 /* Metal.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE2C205A53A80008BA95 /* Metal.m */; };
+		FCA7AE30205A53BB0008BA95 /* MetalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AE2F205A53BB0008BA95 /* MetalCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,14 @@
 		FCA7AE1B205A466A0008BA95 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		FCA7AE1C205A466A0008BA95 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		FCA7AE1D205A466A0008BA95 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		FCA7AE25205A538B0008BA95 /* MetalListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalListViewController.h; sourceTree = "<group>"; };
+		FCA7AE26205A538B0008BA95 /* MetalListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalListViewController.m; sourceTree = "<group>"; };
+		FCA7AE28205A53A00008BA95 /* MetalListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalListViewModel.h; sourceTree = "<group>"; };
+		FCA7AE29205A53A00008BA95 /* MetalListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalListViewModel.m; sourceTree = "<group>"; };
+		FCA7AE2B205A53A80008BA95 /* Metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Metal.h; sourceTree = "<group>"; };
+		FCA7AE2C205A53A80008BA95 /* Metal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Metal.m; sourceTree = "<group>"; };
+		FCA7AE2E205A53BB0008BA95 /* MetalCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalCollectionViewCell.h; sourceTree = "<group>"; };
+		FCA7AE2F205A53BB0008BA95 /* MetalCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +212,7 @@
 				FCA7AD8E2057B0C50008BA95 /* AppDelegate.m */,
 				FCA7ADCD2057B7280008BA95 /* MVVMDemo.pch */,
 				FCA7ADC22057B5F30008BA95 /* productions */,
+				FCA7AE20205A534A0008BA95 /* metal */,
 				FCA7AD932057B0C60008BA95 /* Main.storyboard */,
 				FCA7AD962057B0C60008BA95 /* Assets.xcassets */,
 				FCA7AD982057B0C60008BA95 /* LaunchScreen.storyboard */,
@@ -413,6 +426,53 @@
 			path = SVPullToRefresh;
 			sourceTree = "<group>";
 		};
+		FCA7AE20205A534A0008BA95 /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7AE24205A537A0008BA95 /* viewcontrollers */,
+				FCA7AE23205A536C0008BA95 /* viewmodel */,
+				FCA7AE22205A53640008BA95 /* model */,
+				FCA7AE21205A535B0008BA95 /* view */,
+			);
+			path = metal;
+			sourceTree = "<group>";
+		};
+		FCA7AE21205A535B0008BA95 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7AE2E205A53BB0008BA95 /* MetalCollectionViewCell.h */,
+				FCA7AE2F205A53BB0008BA95 /* MetalCollectionViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FCA7AE22205A53640008BA95 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7AE2B205A53A80008BA95 /* Metal.h */,
+				FCA7AE2C205A53A80008BA95 /* Metal.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FCA7AE23205A536C0008BA95 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7AE28205A53A00008BA95 /* MetalListViewModel.h */,
+				FCA7AE29205A53A00008BA95 /* MetalListViewModel.m */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		FCA7AE24205A537A0008BA95 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7AE25205A538B0008BA95 /* MetalListViewController.h */,
+				FCA7AE26205A538B0008BA95 /* MetalListViewController.m */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,16 +660,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA7AE30205A53BB0008BA95 /* MetalCollectionViewCell.m in Sources */,
 				FCA7AE032057D2490008BA95 /* LoginHandler.m in Sources */,
 				FCA7ADDB2057BB3A0008BA95 /* HTResponse.m in Sources */,
 				FCA7AD9D2057B0C60008BA95 /* main.m in Sources */,
 				FCA7ADD82057BAC50008BA95 /* HTRequest.m in Sources */,
 				FCA7AE1720591B6C0008BA95 /* UILabel+Helper.m in Sources */,
+				FCA7AE2D205A53A80008BA95 /* Metal.m in Sources */,
 				FCA7AE1E205A466A0008BA95 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				FCA7AE002057D2050008BA95 /* BaseHandler.m in Sources */,
 				FCA7AE0E20591A210008BA95 /* ProductionListTableViewCell.m in Sources */,
 				FCA7AE1120591A560008BA95 /* ProductionModel.m in Sources */,
 				FCA7ADCC2057B6BB0008BA95 /* ProductionsViewController.m in Sources */,
+				FCA7AE2A205A53A00008BA95 /* MetalListViewModel.m in Sources */,
 				FCA7ADE82057C1110008BA95 /* CommonUtils.m in Sources */,
 				FCA7ADEB2057C2470008BA95 /* Config.m in Sources */,
 				FCA7AE1F205A466A0008BA95 /* UIScrollView+SVPullToRefresh.m in Sources */,
@@ -620,6 +683,7 @@
 				FCA7ADF42057C5480008BA95 /* LoginViewModel.m in Sources */,
 				FCA7ADE12057BE8C0008BA95 /* RSA.m in Sources */,
 				FCA7ADF12057C5210008BA95 /* LoginViewController.m in Sources */,
+				FCA7AE27205A538B0008BA95 /* MetalListViewController.m in Sources */,
 				FCA7AE1420591A660008BA95 /* ProductionViewModel.m in Sources */,
 				FCA7ADF72057C5540008BA95 /* AccountModel.m in Sources */,
 			);

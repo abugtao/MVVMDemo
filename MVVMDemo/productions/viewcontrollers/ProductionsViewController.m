@@ -9,6 +9,7 @@
 #import "ProductionsViewController.h"
 #import "ProductionViewModel.h"
 #import "HTResponse.h"
+#import "MetalListViewController.h"
 @interface ProductionsViewController ()
 
 @property (nonatomic,strong) ProductionViewModel * viewmodel;
@@ -36,21 +37,22 @@
     
     [self.view addSubview:_tableView];
 }
-- (void)requstData{
-    [self.tableView.pullToRefreshView startAnimating];
-    [[self.viewmodel.productionListCommand execute:@1] subscribeNext:^(HTResponse * resonse) {
-        
-    }];
-}
 
 - (void)setupViewModel{
     [self.viewmodel bindViewToViewModel:self.tableView];
     
     [self.viewmodel.itemSubject subscribeNext:^(ProductionViewModel *model) {
-        
+        MetalListViewController *listVC = [[MetalListViewController alloc] init];
+        [self.navigationController pushViewController:listVC animated:YES];
     }];
 }
 
+- (void)requstData{
+    
+    [[self.viewmodel.productionListCommand execute:@1] subscribeNext:^(HTResponse * resonse) {
+        
+    }];
+}
 
 -(ProductionViewModel *)viewmodel{
     if (_viewmodel==nil) {

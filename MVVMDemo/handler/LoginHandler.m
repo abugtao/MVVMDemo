@@ -8,6 +8,7 @@
 
 #import "LoginHandler.h"
 #import "ProductionModel.h"
+#import "Metal.h"
 @implementation LoginHandler
 //消息列表
 - (HTResponse *)handleMessageCenterListInfo:(HTResponse *)response{
@@ -46,6 +47,29 @@
         
         response.totalCount = [[response.object objectForKey:@"totalCount"] integerValue];
      
+        response.object = mArray;
+        
+        
+        
+    }
+    
+    return response;
+}
+
+
+//贵金属产品列表
+- (HTResponse *)handleMetalProductionListInfo:(HTResponse *)response{
+    if ([response.status integerValue]==10000) {
+        NSArray *items = [response.object objectForKey:@"items"];
+        NSMutableArray *mArray = [NSMutableArray array];
+        
+        for (NSDictionary *dic in items) {
+            Metal *metal = [Metal mj_objectWithKeyValues:dic];
+            [mArray addObject:metal];
+            
+        }
+        
+        response.totalCount = [[response.object objectForKey:@"totalCount"] integerValue];
         response.object = mArray;
         
         

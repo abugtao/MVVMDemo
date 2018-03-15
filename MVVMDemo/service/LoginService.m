@@ -37,4 +37,19 @@
         }
     }];
 }
+
+
+//贵金属产品列表
+- (void)requestMetalProductionListWithParam:(NSDictionary *)params succCallback:(void (^)(HTResponse * response))succcallback failCallback:(void(^)(HTResponse *response))failcallback{
+    [self postRequestWithUrl:API_METAL_LIST params:params successCallback:^(HTResponse *response) {
+        response = [[[LoginHandler alloc] init] handleMetalProductionListInfo:response];
+        if (succcallback!=nil) {
+            succcallback(response);
+        }
+    } failCallback:^(HTResponse *response) {
+        if(failcallback != nil){
+            failcallback(response);
+        }
+    }];
+}
 @end
