@@ -10,6 +10,7 @@
 #import "LoginViewModel.h"
 #import "LoginService.h"
 #import "ProductionsViewController.h"
+#import "UseDataManager.h"
 @interface LoginViewController ()
 @property (nonatomic,strong) UITextField * nameTextField;
 
@@ -28,6 +29,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
+
     
     [self initViews];
     
@@ -69,6 +72,9 @@
 //        } failCallback:^(HTResponse *response) {
 //
 //        }];
+        
+        
+        
         @weakify(self)
         [[self.viewModel.loginCommand execute:nil] subscribeNext:^(HTResponse *response) {
             @strongify(self)
@@ -78,16 +84,39 @@
                 model.name = self.nameTextField.text;
                 model.pwd = self.pwdTextField.text;
                 [CommonDataUtils saveUserInfo:model];
-                
-                
+
+
                 ProductionsViewController *listVC = [[ProductionsViewController alloc] init];
                 [self.navigationController pushViewController:listVC animated:YES];
-                
-                
+
+
             }
-            
-            
+
+
         }];
+        
+        
+//        UseDataManager *useDataManager = [UseDataManager shareUseDataManager];
+//        dispatch_group_t group = dispatch_group_create();
+//        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//        dispatch_group_async(group, queue, ^{
+//            [useDataManager addGPWDwithName:@"1" withPWD:@"123"];
+//
+//        });
+//
+//        dispatch_group_async(group, queue, ^{
+//            [useDataManager addGPWDwithName:@"2" withPWD:@"123"];
+//
+//        });
+//
+//        dispatch_group_async(group, queue, ^{
+//            [useDataManager addGPWDwithName:@"3" withPWD:@"123"];
+//
+//        });
+        
+        
+        
+
     }];
     
     

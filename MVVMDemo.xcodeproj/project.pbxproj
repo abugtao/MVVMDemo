@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9588783519CAC28E11D24B96 /* libPods-MVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA53BDDC9ADF9CA28F5B442 /* libPods-MVVMDemo.a */; };
+		FC66C655205F98C4005EC664 /* UseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC66C654205F98C4005EC664 /* UseDataManager.m */; };
 		FCA7AD8F2057B0C50008BA95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AD8E2057B0C50008BA95 /* AppDelegate.m */; };
 		FCA7AD952057B0C60008BA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA7AD932057B0C60008BA95 /* Main.storyboard */; };
 		FCA7AD972057B0C60008BA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA7AD962057B0C60008BA95 /* Assets.xcassets */; };
@@ -62,6 +63,9 @@
 		9851414C1E3A86F5C39A45A3 /* Pods-MVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ADA53BDDC9ADF9CA28F5B442 /* libPods-MVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDFA24BBB9B755472CDA80C /* Pods-MVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FC66C653205F98C4005EC664 /* UseDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseDataManager.h; sourceTree = "<group>"; };
+		FC66C654205F98C4005EC664 /* UseDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseDataManager.m; sourceTree = "<group>"; };
+		FC66C656205F99A5005EC664 /* Single.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Single.h; sourceTree = "<group>"; };
 		FCA7AD8A2057B0C50008BA95 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7AD8D2057B0C50008BA95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FCA7AD8E2057B0C50008BA95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 		FCA7ADE32057BF800008BA95 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				FC66C656205F99A5005EC664 /* Single.h */,
 				FCA7AE0B205905DE0008BA95 /* EncoderDecoder.h */,
 				FCA7ADE42057BF990008BA95 /* define.h */,
 				FCA7ADE92057C2470008BA95 /* Config.h */,
@@ -356,6 +361,8 @@
 				FCA7ADE72057C1110008BA95 /* CommonUtils.m */,
 				FCA7AE08205904730008BA95 /* CommonDataUtils.h */,
 				FCA7AE09205904730008BA95 /* CommonDataUtils.m */,
+				FC66C653205F98C4005EC664 /* UseDataManager.h */,
+				FC66C654205F98C4005EC664 /* UseDataManager.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -685,6 +692,7 @@
 				FCA7ADF12057C5210008BA95 /* LoginViewController.m in Sources */,
 				FCA7AE27205A538B0008BA95 /* MetalListViewController.m in Sources */,
 				FCA7AE1420591A660008BA95 /* ProductionViewModel.m in Sources */,
+				FC66C655205F98C4005EC664 /* UseDataManager.m in Sources */,
 				FCA7ADF72057C5540008BA95 /* AccountModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
