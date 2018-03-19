@@ -13,7 +13,7 @@
 
 @property (nonatomic,strong) RACCommand * requestMetalListCommand;
 
-@property (nonatomic,strong) RACSubject * itemSubject ;
+
 
 - (void)bindViewModelWithView:(UIView *)view;
 
