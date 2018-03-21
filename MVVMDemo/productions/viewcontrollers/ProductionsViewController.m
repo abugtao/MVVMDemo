@@ -40,10 +40,14 @@
 
 - (void)setupViewModel{
     [self.viewmodel bindViewToViewModel:self.tableView];
-    
+    @weakify(self)
     [self.viewmodel.itemSubject subscribeNext:^(ProductionViewModel *model) {
-        MetalListViewController *listVC = [[MetalListViewController alloc] init];
-        [self.navigationController pushViewController:listVC animated:YES];
+        @strongify(self)
+//        MetalListViewController *listVC = [[MetalListViewController alloc] init];
+//        [self.navigationController pushViewController:listVC animated:YES];
+
+
+        [VCControlCenter gotoMetalVCNeedLogin:YES formVC:self withinfo:NULL];
     }];
 }
 
@@ -64,7 +68,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)dealloc{
+    NSLog(@"production dealloc");
+}
 /*
 #pragma mark - Navigation
 

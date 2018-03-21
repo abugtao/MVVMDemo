@@ -86,9 +86,15 @@
                 [CommonDataUtils saveUserInfo:model];
 
 
-                ProductionsViewController *listVC = [[ProductionsViewController alloc] init];
-                [self.navigationController pushViewController:listVC animated:YES];
-
+                
+                
+                if(self.loginSuccessBlock){
+                    self.loginSuccessBlock();
+                }else{
+                    
+                    ProductionsViewController *listVC = [[ProductionsViewController alloc] init];
+                    [self.navigationController pushViewController:listVC animated:YES];
+                }
 
             }
 
@@ -142,6 +148,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)dealloc{
+    NSLog(@"login dealloc");
 }
 
 /*

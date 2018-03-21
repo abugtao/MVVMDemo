@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//typeof (void)(^LoginSuccessBlock)(void);
 @interface LoginViewController : UIViewController
+
+
+@property (nonatomic,copy) void(^loginSuccessBlock)(void);
 
 @end

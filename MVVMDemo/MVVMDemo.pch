@@ -30,6 +30,7 @@
 #import "EncoderDecoder.h"
 #import "Single.h"
 #import "UILabel+Helper.h"
+#import "VCControlCenter.h"
 
 
 
