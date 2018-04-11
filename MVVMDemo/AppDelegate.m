@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "CrashTool.h"
 @interface AppDelegate ()
 
 @end
@@ -19,6 +20,9 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    [CrashTool initCrashTool];//收集上传崩溃日志
+    
+    
     
     
     LoginViewController * productionVC = [[LoginViewController alloc]init];
@@ -28,6 +32,8 @@
     
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

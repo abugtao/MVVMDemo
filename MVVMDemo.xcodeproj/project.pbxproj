@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9588783519CAC28E11D24B96 /* libPods-MVVMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA53BDDC9ADF9CA28F5B442 /* libPods-MVVMDemo.a */; };
+		CE49D2F0207DE433008B0067 /* CrashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CE49D2EF207DE433008B0067 /* CrashTool.m */; };
 		FC30D93A20624E5900D490C5 /* VCControlCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC30D93920624E5900D490C5 /* VCControlCenter.m */; };
 		FC66C655205F98C4005EC664 /* UseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC66C654205F98C4005EC664 /* UseDataManager.m */; };
 		FCA7AD8F2057B0C50008BA95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AD8E2057B0C50008BA95 /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 		9851414C1E3A86F5C39A45A3 /* Pods-MVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ADA53BDDC9ADF9CA28F5B442 /* libPods-MVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDFA24BBB9B755472CDA80C /* Pods-MVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CE49D2EE207DE433008B0067 /* CrashTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashTool.h; sourceTree = "<group>"; };
+		CE49D2EF207DE433008B0067 /* CrashTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashTool.m; sourceTree = "<group>"; };
 		FC30D93820624E5900D490C5 /* VCControlCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCControlCenter.h; sourceTree = "<group>"; };
 		FC30D93920624E5900D490C5 /* VCControlCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCControlCenter.m; sourceTree = "<group>"; };
 		FC66C653205F98C4005EC664 /* UseDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseDataManager.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				FCA7AE09205904730008BA95 /* CommonDataUtils.m */,
 				FC66C653205F98C4005EC664 /* UseDataManager.h */,
 				FC66C654205F98C4005EC664 /* UseDataManager.m */,
+				CE49D2EE207DE433008B0067 /* CrashTool.h */,
+				CE49D2EF207DE433008B0067 /* CrashTool.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -704,6 +709,7 @@
 				FCA7ADF42057C5480008BA95 /* LoginViewModel.m in Sources */,
 				FCA7ADE12057BE8C0008BA95 /* RSA.m in Sources */,
 				FCA7ADF12057C5210008BA95 /* LoginViewController.m in Sources */,
+				CE49D2F0207DE433008B0067 /* CrashTool.m in Sources */,
 				FCA7AE27205A538B0008BA95 /* MetalListViewController.m in Sources */,
 				FCA7AE1420591A660008BA95 /* ProductionViewModel.m in Sources */,
 				FC66C655205F98C4005EC664 /* UseDataManager.m in Sources */,
